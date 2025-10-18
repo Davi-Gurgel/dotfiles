@@ -22,6 +22,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 --vim config
+vim.opt.termguicolors = true
+vim.opt.colorcolumn = "80"
 vim.opt.guicursor = ""
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -33,7 +35,7 @@ vim.opt.signcolumn = "yes"
 -- keybidings
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
-vim.keymap.set({ 'n', 'x', 'v' }, '<leader>y', '"+y<CR>')
+vim.keymap.set({ 'x', 'v' }, '<leader>y', '"+y<CR>')
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
