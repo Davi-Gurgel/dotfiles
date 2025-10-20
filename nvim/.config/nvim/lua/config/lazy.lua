@@ -45,8 +45,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('i', '<C-c>', '<Esc>')
 
-vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv<CR>")
-vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv<CR>")
+vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv")
 
 -- Setup lazy.nvim
 require("lazy").setup({
