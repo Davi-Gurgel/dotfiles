@@ -5,6 +5,10 @@ return {
 		require('lualine').setup({
 			options = {
 				theme = 'codedark',
+				section_separators = '',
+				component_separators = '',
+				disable_filetype = { 'neo-tree' },
+				globalstatus = true,
 			}
 		})
 	end
