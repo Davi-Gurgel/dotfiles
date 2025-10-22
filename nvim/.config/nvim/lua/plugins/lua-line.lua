@@ -4,7 +4,7 @@ return {
 	config = function()
 		require('lualine').setup({
 			options = {
-				theme = 'codedark',
+				theme = 'horizon',
 				section_separators = '',
 				component_separators = '',
 				disable_filetype = { 'neo-tree' },

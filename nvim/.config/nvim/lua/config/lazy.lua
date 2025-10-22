@@ -1,4 +1,3 @@
-local vim = vim
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -25,7 +24,8 @@ vim.g.maplocalleader = "\\"
 --vim config
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.guicursor = ""
 vim.opt.number = true
@@ -34,6 +34,7 @@ vim.opt.wrap = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.signcolumn = "yes"
+vim.opt.scrolloff = 10
 
 -- keybidings
 vim.keymap.set('n', '<leader>w', ':w<CR>')
@@ -44,7 +45,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('i', '<C-c>', '<Esc>')
-
+vim.keymap.set('n', '<leader>Q', ':qa!<CR>')
 vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv")
 
