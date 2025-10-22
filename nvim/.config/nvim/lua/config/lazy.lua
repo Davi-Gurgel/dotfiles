@@ -23,8 +23,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 --vim config
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true

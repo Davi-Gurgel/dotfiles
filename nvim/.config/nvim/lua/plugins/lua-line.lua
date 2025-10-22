@@ -7,8 +7,6 @@ return {
 				theme = 'horizon',
 				section_separators = '',
 				component_separators = '',
-				disable_filetype = { 'neo-tree' },
-				globalstatus = true,
 			}
 		})
 	end

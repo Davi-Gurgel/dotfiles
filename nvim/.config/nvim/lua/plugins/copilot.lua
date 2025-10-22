@@ -1,14 +1,18 @@
 return {
-	"github/copilot.vim",
+	"zbirenbaum/copilot.lua",
 	cmd = "Copilot",
-	event = "BufWinEnter",
+	event = "InsertEnter",
 	config = function()
-		vim.keymap.set('n', '<leader>cd', ':Copilot disable<CR>')
-		vim.keymap.set('n', '<leader>ce', ':Copilot enable<CR>')
-		vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
-			expr = true,
-			replace_keycodes = false
+		require("copilot").setup({
+			suggestion = {
+				auto_trigger = true,
+				keymap = {
+					accept = "<C-j>",
+				}
+			}
 		})
-		vim.g.copilot_no_tab_map = true
-	end
+		vim.keymap.set('n', '<leader>ct', function()
+			require("copilot.suggestion").toggle_auto_trigger()
+		end)
+	end,
 }
