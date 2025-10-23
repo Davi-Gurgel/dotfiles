@@ -1,0 +1,9 @@
+- Nerd Font
+- luarocks
+- ripgrep
+- fd-find
+- nodejs
+- rust / cargo
+- tree-sitter-cli
+- clang
+- typst
