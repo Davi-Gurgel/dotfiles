@@ -11,12 +11,15 @@ return {
 				["<C-l>"] = false,
 				["<C-k>"] = false,
 				["<C-j>"] = false,
-				["<M-h>"] = "actions.select_split",
+				["<M-h>"] = "actions.select_vsplit",
+				["q"] = "actions.close",
 			},
+			delete_to_trash = true,
 			view_options = {
 				show_hidden = true,
-			}
+			},
+			skip_confirm_for_simple_edits = true,
 		})
-		vim.keymap.set('n', '-', require('oil').toggle_float)
+		vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 	end
 }
