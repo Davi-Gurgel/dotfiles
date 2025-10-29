@@ -1,11 +1,12 @@
 return {
-	"vague-theme/vague.nvim",
-	lazy = false, -- make sure we load this during startup if it is your main colorscheme
-	priority = 1000, -- make sure to load this before all the other plugins
-	config = function()
-		require("vague").setup({
-            trasparent = true,
-		})
-		vim.cmd("colorscheme vague")
-	end
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+        require("rose-pine").setup({
+            variant = "main",
+            styles = { transparency = true },
+        })
+        vim.cmd("colorscheme rose-pine")
+        vim.cmd(":hi statusline guibg=NONE")
+    end
 }

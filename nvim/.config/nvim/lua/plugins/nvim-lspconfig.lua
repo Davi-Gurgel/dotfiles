@@ -5,6 +5,7 @@ return {
 		vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 		vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 		vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+        vim.keymap.set('n', '<leader>sd', vim.diagnostic.open_float)
 		vim.diagnostic.config({ virtual_text = true })
 		vim.lsp.enable({
 			"ts_ls",
