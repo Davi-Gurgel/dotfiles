@@ -104,4 +104,11 @@ export FZF_DEFAULT_OPTS="
 
 . "$HOME/.local/bin/env"
 
+# Start ssh-agent if not running, and add SSH key
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    eval "$(ssh-agent -s)"
+fi
+
+# Add the SSH key, suppress errors if already added
+ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
 
