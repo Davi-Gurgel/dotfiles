@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -38,7 +38,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -82,8 +82,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^t "tmux new-session -A -s main\n"
 
 alias vim="nvim" 
-alias ls="ls -A --color=auto"
-alias sd='cd ~ && cd $(find * -type d | fzf)'
 alias src="source ~/.zshrc"
 
 # fnm
@@ -96,19 +94,21 @@ fi
 
 # fzf theme
 export FZF_DEFAULT_OPTS="
-	--color=fg:#908caa,bg:#191724,hl:#ebbcba
-	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
-	--color=border:#403d52,header:#31748f,gutter:#191724
-	--color=spinner:#f6c177,info:#9ccfd8
-	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+    --color=fg:#cdcdcd
+    --color=bg:#141415
+    --color=hl:#f3be7c
+    --color=fg+:#aeaed1
+    --color=bg+:#252530
+    --color=hl+:#f3be7c
+    --color=border:#606079
+    --color=header:#6e94b2
+    --color=gutter:#141415
+    --color=spinner:#7fa563
+    --color=info:#f3be7c
+    --color=pointer:#aeaed1
+    --color=marker:#d8647e
+    --color=prompt:#bb9dbd"
 
 . "$HOME/.local/bin/env"
 
-# Start ssh-agent if not running, and add SSH key
-if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    eval "$(ssh-agent -s)"
-fi
-
-# Add the SSH key, suppress errors if already added
-ssh-add -q ~/.ssh/id_ed25519 2>/dev/null
-
+eval "$(starship init zsh)"

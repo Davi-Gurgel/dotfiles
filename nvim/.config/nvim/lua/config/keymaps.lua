@@ -16,15 +16,10 @@ vim.keymap.set({ "n", "v", "x" }, ":", ";", { desc = "Self explanatory" })
 
 vim.keymap.set('i', '<C-c>', '<Esc>')
 vim.keymap.set('n', 'x', '"_x', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>de', 'd$', { desc = 'Delete to the end of the line' })
 
+vim.keymap.set('n', '<leader>de', 'd$', { desc = 'Delete to the end of the line' })
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('x', 'K', ":m '<-2<CR>gv=gv")
-
-vim.keymap.set('n', '<C-c>', ':nohl<CR>', { desc = 'Clear search highlighting' })
-
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "Replace word cursor is on globally" })
 
 -- Tmux sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

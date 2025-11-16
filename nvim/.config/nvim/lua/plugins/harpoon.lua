@@ -16,10 +16,10 @@ return {
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()
 		end)
-		vim.keymap.set("n", "<C-j>", function()
+		vim.keymap.set("n", "<M-j>", function()
 			harpoon:list():next()
 		end)
-		vim.keymap.set("n", "<C-k>", function()
+		vim.keymap.set("n", "<M-k>", function()
 			harpoon:list():prev()
 		end)
 	end,

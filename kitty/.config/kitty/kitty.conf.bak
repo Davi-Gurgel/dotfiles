@@ -15,15 +15,15 @@ enable_audio_bell no
 
 hide_window_decorations yes
 
-# background_opacity 0.9
+background_opacity 0.9
 
 shell_integration no-cursor
 
-remember_window_size yes
-# initial_window_width 1860
-# initial_window_height 1000
+remember_window_size no
+initial_window_width 1920
+initial_window_height 1080
 
 # BEGIN_KITTY_THEME
-# Vague
+# Rosé Pine
 include current-theme.conf
 # END_KITTY_THEME
