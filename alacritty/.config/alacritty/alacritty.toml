@@ -5,9 +5,10 @@ import = ["vague.toml"]
 startup_mode = "Maximized"
 decorations = "None"
 dynamic_title = false
+dynamic_padding = true
 
 [font]
-normal = { family = "FiraCode Nerd Font Mono", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 18.0
 
 [cursor]
@@ -15,3 +16,4 @@ style = { shape = "Block", blinking = "Never" }
 
 [mouse]
 hide_when_typing = true
+

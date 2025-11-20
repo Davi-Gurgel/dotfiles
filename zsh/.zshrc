@@ -83,6 +83,7 @@ bindkey -s ^t "tmux new-session -A -s main\n"
 
 alias vim="nvim" 
 alias src="source ~/.zshrc"
+alias lg="lazygit"
 
 # fnm
 FNM_PATH="/home/dgurgel/.local/share/fnm"
